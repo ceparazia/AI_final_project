@@ -69,7 +69,7 @@ def generate_message(
 
 
 def run_simulation(T: int = 5, output_dir: str | Path | None = None) -> dict[str, Any]:
-    output_path = Path(output_dir) if output_dir else PROJECT_ROOT/"output"
+    output_path = Path(output_dir) if output_dir else PROJECT_ROOT/"output_A"
     state = init_state()
     client = DeepSeekClient()
     api_stats: dict[str, Any] = {
@@ -289,7 +289,7 @@ def _write_json(data: dict[str, Any], path: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run A student's AlTown simulation scheduler.")
     parser.add_argument("--rounds", type=int, default=5, help="number of timesteps")
-    parser.add_argument("--output-dir", default=str(PROJECT_ROOT/ "output"), help="directory for state_A outputs")
+    parser.add_argument("--output-dir", default=str(PROJECT_ROOT/ "output_A"), help="directory for state_A outputs")
     args = parser.parse_args()
 
     state = run_simulation(T=args.rounds, output_dir=args.output_dir)
