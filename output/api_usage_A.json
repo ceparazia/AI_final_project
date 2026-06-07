@@ -1,0 +1,11 @@
+{
+  "model": "deepseek-v4-flash",
+  "attempted": 20,
+  "succeeded": 20,
+  "failed": 0,
+  "errors": [],
+  "repair_attempted": 4,
+  "repair_succeeded": 0,
+  "coerced_from_text": 4,
+  "fallback_used": false
+}

@@ -1,0 +1,347 @@
+{
+  "event": {
+    "event_id": "exam_policy_change",
+    "content": "某课程考试形式可能从闭卷调整为开卷，具体安排尚未确认。",
+    "source": "anonymous_message",
+    "verified": false
+  },
+  "agents": {
+    "agent_1": {
+      "name": "信息传播者",
+      "role": "active_spreader",
+      "personality": {
+        "activity": 0.9,
+        "trustfulness": 0.7,
+        "verification": 0.3,
+        "risk_sensitivity": 0.5
+      },
+      "opinion": "believe",
+      "confidence": 0.73,
+      "memory": [
+        {
+          "timestep": 0,
+          "speaker": "agent_1",
+          "receiver": "agent_3",
+          "stance": "uncertain",
+          "confidence": 0.62,
+          "content": "听说课程考试可能改开卷，但还没正式通知，你觉得呢？",
+          "direction": "sent"
+        },
+        {
+          "timestep": 0,
+          "speaker": "agent_2",
+          "receiver": "agent_1",
+          "stance": "uncertain",
+          "confidence": 0.56,
+          "content": "这个说法还需要官方确认，先别急着传播，我们等正式通知。",
+          "direction": "received"
+        }
+      ],
+      "trusted_agents": []
+    },
+    "agent_2": {
+      "name": "理性验证者",
+      "role": "rational_verifier",
+      "personality": {
+        "activity": 0.65,
+        "trustfulness": 0.35,
+        "verification": 0.92,
+        "risk_sensitivity": 0.55
+      },
+      "opinion": "uncertain",
+      "confidence": 0.46,
+      "memory": [
+        {
+          "timestep": 0,
+          "speaker": "agent_2",
+          "receiver": "agent_1",
+          "stance": "uncertain",
+          "confidence": 0.56,
+          "content": "这个说法还需要官方确认，先别急着传播，我们等正式通知。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 0,
+          "speaker": "agent_3",
+          "receiver": "agent_2",
+          "stance": "uncertain",
+          "confidence": 0.52,
+          "content": "同意等官方消息。我们收集更多信息再决定下一步行动，避免误传。",
+          "direction": "received"
+        }
+      ],
+      "trusted_agents": []
+    },
+    "agent_3": {
+      "name": "组织协调者",
+      "role": "coordinator",
+      "personality": {
+        "activity": 0.75,
+        "trustfulness": 0.52,
+        "verification": 0.75,
+        "risk_sensitivity": 0.68
+      },
+      "opinion": "uncertain",
+      "confidence": 0.52,
+      "memory": [
+        {
+          "timestep": 0,
+          "speaker": "agent_1",
+          "receiver": "agent_3",
+          "stance": "uncertain",
+          "confidence": 0.62,
+          "content": "听说课程考试可能改开卷，但还没正式通知，你觉得呢？",
+          "direction": "received"
+        },
+        {
+          "timestep": 0,
+          "speaker": "agent_3",
+          "receiver": "agent_2",
+          "stance": "uncertain",
+          "confidence": 0.52,
+          "content": "同意等官方消息。我们收集更多信息再决定下一步行动，避免误传。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 0,
+          "speaker": "agent_4",
+          "receiver": "agent_3",
+          "stance": "reject",
+          "confidence": 0.61,
+          "content": "开卷考试消息不可信，风险太大，别传播，等官方确认。",
+          "direction": "received"
+        }
+      ],
+      "trusted_agents": []
+    },
+    "agent_4": {
+      "name": "风险敏感者",
+      "role": "risk_sensitive",
+      "personality": {
+        "activity": 0.7,
+        "trustfulness": 0.42,
+        "verification": 0.7,
+        "risk_sensitivity": 0.92
+      },
+      "opinion": "reject",
+      "confidence": 0.74,
+      "memory": [
+        {
+          "timestep": 0,
+          "speaker": "agent_4",
+          "receiver": "agent_3",
+          "stance": "reject",
+          "confidence": 0.61,
+          "content": "开卷考试消息不可信，风险太大，别传播，等官方确认。",
+          "direction": "sent"
+        }
+      ],
+      "trusted_agents": []
+    }
+  },
+  "messages": [
+    {
+      "timestep": 0,
+      "speaker": "agent_1",
+      "receiver": "agent_3",
+      "content": "听说课程考试可能改开卷，但还没正式通知，你觉得呢？",
+      "stance": "uncertain",
+      "confidence": 0.62
+    },
+    {
+      "timestep": 0,
+      "speaker": "agent_2",
+      "receiver": "agent_1",
+      "content": "这个说法还需要官方确认，先别急着传播，我们等正式通知。",
+      "stance": "uncertain",
+      "confidence": 0.56
+    },
+    {
+      "timestep": 0,
+      "speaker": "agent_3",
+      "receiver": "agent_2",
+      "content": "同意等官方消息。我们收集更多信息再决定下一步行动，避免误传。",
+      "stance": "uncertain",
+      "confidence": 0.52
+    },
+    {
+      "timestep": 0,
+      "speaker": "agent_4",
+      "receiver": "agent_3",
+      "content": "开卷考试消息不可信，风险太大，别传播，等官方确认。",
+      "stance": "reject",
+      "confidence": 0.61
+    }
+  ],
+  "relationships": {
+    "agent_1": {
+      "agent_2": {
+        "trust": 0.61,
+        "interaction_count": 1
+      },
+      "agent_3": {
+        "trust": 0.58,
+        "interaction_count": 1
+      },
+      "agent_4": {
+        "trust": 0.56,
+        "interaction_count": 0
+      }
+    },
+    "agent_2": {
+      "agent_1": {
+        "trust": 0.57,
+        "interaction_count": 1
+      },
+      "agent_3": {
+        "trust": 0.61,
+        "interaction_count": 1
+      },
+      "agent_4": {
+        "trust": 0.56,
+        "interaction_count": 0
+      }
+    },
+    "agent_3": {
+      "agent_1": {
+        "trust": 0.59,
+        "interaction_count": 1
+      },
+      "agent_2": {
+        "trust": 0.68,
+        "interaction_count": 1
+      },
+      "agent_4": {
+        "trust": 0.59,
+        "interaction_count": 1
+      }
+    },
+    "agent_4": {
+      "agent_1": {
+        "trust": 0.56,
+        "interaction_count": 0
+      },
+      "agent_2": {
+        "trust": 0.61,
+        "interaction_count": 0
+      },
+      "agent_3": {
+        "trust": 0.58,
+        "interaction_count": 1
+      }
+    }
+  },
+  "debate": {
+    "triggered": true,
+    "round": 1,
+    "claims": [
+      {
+        "timestep": 0,
+        "agent": "agent_1",
+        "stance": "believe",
+        "confidence": 0.73,
+        "claim": "我会分享“某课程考试形式可能从闭卷调整为开卷，具体安排尚未确认。”，但需要说明它来自非正式渠道。"
+      },
+      {
+        "timestep": 0,
+        "agent": "agent_2",
+        "stance": "uncertain",
+        "confidence": 0.46,
+        "claim": "目前没有课程组或教务系统证据，应优先核验来源。"
+      },
+      {
+        "timestep": 0,
+        "agent": "agent_3",
+        "stance": "uncertain",
+        "confidence": 0.52,
+        "claim": "群体可以先记录信息，但对外传播前应形成统一、谨慎的说法。"
+      },
+      {
+        "timestep": 0,
+        "agent": "agent_4",
+        "stance": "reject",
+        "confidence": 0.74,
+        "claim": "如果同学直接按开卷准备，风险较高，应提醒大家等待正式通知。"
+      }
+    ],
+    "votes": {
+      "agent_1": {
+        "vote": "believe",
+        "confidence": 0.73
+      },
+      "agent_2": {
+        "vote": "uncertain",
+        "confidence": 0.46
+      },
+      "agent_3": {
+        "vote": "uncertain",
+        "confidence": 0.52
+      },
+      "agent_4": {
+        "vote": "reject",
+        "confidence": 0.74
+      }
+    },
+    "summary": "第 0 轮辩论后，believe=1、reject=1、uncertain=2。组织协调者建议等待正式通知，同时保留多角色质疑和投票记录。"
+  },
+  "metrics": {
+    "spread_rate": [
+      {
+        "timestep": 0,
+        "value": 0.25
+      }
+    ],
+    "average_confidence": [
+      {
+        "timestep": 0,
+        "value": 0.613
+      }
+    ],
+    "opinion_count": [
+      {
+        "timestep": 0,
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      }
+    ],
+    "consensus_reached": false
+  },
+  "timeline": [
+    {
+      "timestep": 0,
+      "event_id": "exam_policy_change",
+      "opinion_count": {
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      },
+      "spread_rate": 0.25,
+      "average_confidence": 0.613,
+      "debate_triggered": true,
+      "agent_status": {
+        "agent_1": {
+          "opinion": "believe",
+          "confidence": 0.73,
+          "trusted_agents": []
+        },
+        "agent_2": {
+          "opinion": "uncertain",
+          "confidence": 0.46,
+          "trusted_agents": []
+        },
+        "agent_3": {
+          "opinion": "uncertain",
+          "confidence": 0.52,
+          "trusted_agents": []
+        },
+        "agent_4": {
+          "opinion": "reject",
+          "confidence": 0.74,
+          "trusted_agents": []
+        }
+      },
+      "message_count": 4
+    }
+  ]
+}
