@@ -1,0 +1,107 @@
+{
+  "module": "C",
+  "description": "Debate, vote, confidence and metrics self-test on A outputs.",
+  "passed": true,
+  "items": [
+    {
+      "source_file": "state_A_timestep_0.json",
+      "timestep": 0,
+      "trigger_before_update": true,
+      "debate_triggered": true,
+      "claim_count": 4,
+      "vote_counts": {
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      },
+      "agents_unchanged": true,
+      "relationships_unchanged": true,
+      "spread_rate": 0.25,
+      "average_confidence": 0.613,
+      "believe": 1,
+      "reject": 1,
+      "uncertain": 2,
+      "consensus_reached": false
+    },
+    {
+      "source_file": "state_A_timestep_1.json",
+      "timestep": 1,
+      "trigger_before_update": true,
+      "debate_triggered": true,
+      "claim_count": 4,
+      "vote_counts": {
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      },
+      "agents_unchanged": true,
+      "relationships_unchanged": true,
+      "spread_rate": 0.25,
+      "average_confidence": 0.628,
+      "believe": 1,
+      "reject": 1,
+      "uncertain": 2,
+      "consensus_reached": false
+    },
+    {
+      "source_file": "state_A_timestep_2.json",
+      "timestep": 2,
+      "trigger_before_update": true,
+      "debate_triggered": true,
+      "claim_count": 4,
+      "vote_counts": {
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      },
+      "agents_unchanged": true,
+      "relationships_unchanged": true,
+      "spread_rate": 0.25,
+      "average_confidence": 0.627,
+      "believe": 1,
+      "reject": 1,
+      "uncertain": 2,
+      "consensus_reached": false
+    },
+    {
+      "source_file": "state_A_timestep_3.json",
+      "timestep": 3,
+      "trigger_before_update": true,
+      "debate_triggered": true,
+      "claim_count": 4,
+      "vote_counts": {
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      },
+      "agents_unchanged": true,
+      "relationships_unchanged": true,
+      "spread_rate": 0.25,
+      "average_confidence": 0.65,
+      "believe": 1,
+      "reject": 1,
+      "uncertain": 2,
+      "consensus_reached": false
+    },
+    {
+      "source_file": "state_A_timestep_4.json",
+      "timestep": 4,
+      "trigger_before_update": true,
+      "debate_triggered": true,
+      "claim_count": 4,
+      "vote_counts": {
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      },
+      "agents_unchanged": true,
+      "relationships_unchanged": true,
+      "spread_rate": 0.25,
+      "average_confidence": 0.62,
+      "believe": 1,
+      "reject": 1,
+      "uncertain": 2,
+      "consensus_reached": false
+    }
+  ]
+}

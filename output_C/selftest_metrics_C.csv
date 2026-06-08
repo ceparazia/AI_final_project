@@ -1,0 +1,6 @@
+﻿timestep,source_file,trigger_before_update,debate_triggered,claim_count,spread_rate,average_confidence,believe,reject,uncertain,consensus_reached,agents_unchanged,relationships_unchanged
+0,state_A_timestep_0.json,True,True,4,0.25,0.613,1,1,2,False,True,True
+1,state_A_timestep_1.json,True,True,4,0.25,0.628,1,1,2,False,True,True
+2,state_A_timestep_2.json,True,True,4,0.25,0.627,1,1,2,False,True,True
+3,state_A_timestep_3.json,True,True,4,0.25,0.65,1,1,2,False,True,True
+4,state_A_timestep_4.json,True,True,4,0.25,0.62,1,1,2,False,True,True

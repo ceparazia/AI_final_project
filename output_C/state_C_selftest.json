@@ -1,0 +1,929 @@
+{
+  "event": {
+    "event_id": "exam_policy_change",
+    "content": "某课程考试形式可能从闭卷调整为开卷，具体安排尚未确认。",
+    "source": "anonymous_message",
+    "verified": false
+  },
+  "agents": {
+    "agent_1": {
+      "name": "信息传播者",
+      "role": "active_spreader",
+      "personality": {
+        "activity": 0.9,
+        "trustfulness": 0.7,
+        "verification": 0.3,
+        "risk_sensitivity": 0.5
+      },
+      "opinion": "believe",
+      "confidence": 0.71,
+      "memory": [
+        {
+          "timestep": 0,
+          "speaker": "agent_1",
+          "receiver": "agent_3",
+          "stance": "uncertain",
+          "confidence": 0.62,
+          "content": "听说课程考试可能改开卷，但还没正式通知，你觉得呢？",
+          "direction": "sent"
+        },
+        {
+          "timestep": 0,
+          "speaker": "agent_2",
+          "receiver": "agent_1",
+          "stance": "uncertain",
+          "confidence": 0.56,
+          "content": "这个说法还需要官方确认，先别急着传播，我们等正式通知。",
+          "direction": "received"
+        },
+        {
+          "timestep": 1,
+          "speaker": "agent_1",
+          "receiver": "agent_2",
+          "stance": "believe",
+          "confidence": 0.73,
+          "content": "这条信息还需要等待正式通知确认。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 1,
+          "speaker": "agent_2",
+          "receiver": "agent_1",
+          "stance": "uncertain",
+          "confidence": 0.46,
+          "content": "虽然你倾向于相信，但我们的验证显示来源不明，建议还是等官方通知再定论。",
+          "direction": "received"
+        },
+        {
+          "timestep": 2,
+          "speaker": "agent_1",
+          "receiver": "agent_3",
+          "stance": "believe",
+          "confidence": 0.78,
+          "content": "这条信息还需要等待正式通知确认。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 2,
+          "speaker": "agent_2",
+          "receiver": "agent_1",
+          "stance": "uncertain",
+          "confidence": 0.47,
+          "content": "我再次核实了来源，匿名消息可信度低，建议等官方通知再决定。",
+          "direction": "received"
+        },
+        {
+          "timestep": 2,
+          "speaker": "agent_4",
+          "receiver": "agent_1",
+          "stance": "reject",
+          "confidence": 0.8,
+          "content": "那则匿名信息风险很高，别轻信，等官方通知再决定复习方向。",
+          "direction": "received"
+        },
+        {
+          "timestep": 3,
+          "speaker": "agent_1",
+          "receiver": "agent_3",
+          "stance": "uncertain",
+          "confidence": 0.5,
+          "content": "听说考试可能改开卷了，虽然还没正式通知，但我觉得挺靠谱，咱们得提前准备起来。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 3,
+          "speaker": "agent_2",
+          "receiver": "agent_1",
+          "stance": "uncertain",
+          "confidence": 0.46,
+          "content": "我理解你的想法，但匿名消息来源不可靠，还是等官方公布再准备吧。",
+          "direction": "received"
+        },
+        {
+          "timestep": 4,
+          "speaker": "agent_1",
+          "receiver": "agent_3",
+          "stance": "uncertain",
+          "confidence": 0.5,
+          "content": "我听说考试可能变开卷，虽然没正式通知，但我觉得可能性很大，咱们先准备起来更稳妥。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 4,
+          "speaker": "agent_2",
+          "receiver": "agent_1",
+          "stance": "uncertain",
+          "confidence": 0.53,
+          "content": "我明白你倾向相信，但匿名消息不可靠。我们最好一起查一下官方通知，确认后再准备。",
+          "direction": "received"
+        },
+        {
+          "timestep": 4,
+          "speaker": "agent_4",
+          "receiver": "agent_1",
+          "stance": "reject",
+          "confidence": 0.84,
+          "content": "这条信息还需要等待正式通知确认。",
+          "direction": "received"
+        }
+      ],
+      "trusted_agents": []
+    },
+    "agent_2": {
+      "name": "理性验证者",
+      "role": "rational_verifier",
+      "personality": {
+        "activity": 0.65,
+        "trustfulness": 0.35,
+        "verification": 0.92,
+        "risk_sensitivity": 0.55
+      },
+      "opinion": "uncertain",
+      "confidence": 0.46,
+      "memory": [
+        {
+          "timestep": 0,
+          "speaker": "agent_2",
+          "receiver": "agent_1",
+          "stance": "uncertain",
+          "confidence": 0.56,
+          "content": "这个说法还需要官方确认，先别急着传播，我们等正式通知。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 0,
+          "speaker": "agent_3",
+          "receiver": "agent_2",
+          "stance": "uncertain",
+          "confidence": 0.52,
+          "content": "同意等官方消息。我们收集更多信息再决定下一步行动，避免误传。",
+          "direction": "received"
+        },
+        {
+          "timestep": 1,
+          "speaker": "agent_1",
+          "receiver": "agent_2",
+          "stance": "believe",
+          "confidence": 0.73,
+          "content": "这条信息还需要等待正式通知确认。",
+          "direction": "received"
+        },
+        {
+          "timestep": 1,
+          "speaker": "agent_2",
+          "receiver": "agent_1",
+          "stance": "uncertain",
+          "confidence": 0.46,
+          "content": "虽然你倾向于相信，但我们的验证显示来源不明，建议还是等官方通知再定论。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 1,
+          "speaker": "agent_3",
+          "receiver": "agent_2",
+          "stance": "uncertain",
+          "confidence": 0.52,
+          "content": "我还是认为需要等待官方确认，但我们可以先准备一份可能的应对方案。",
+          "direction": "received"
+        },
+        {
+          "timestep": 1,
+          "speaker": "agent_4",
+          "receiver": "agent_2",
+          "stance": "reject",
+          "confidence": 0.74,
+          "content": "这条信息还需要等待正式通知确认。",
+          "direction": "received"
+        },
+        {
+          "timestep": 2,
+          "speaker": "agent_2",
+          "receiver": "agent_1",
+          "stance": "uncertain",
+          "confidence": 0.47,
+          "content": "我再次核实了来源，匿名消息可信度低，建议等官方通知再决定。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 3,
+          "speaker": "agent_2",
+          "receiver": "agent_1",
+          "stance": "uncertain",
+          "confidence": 0.46,
+          "content": "我理解你的想法，但匿名消息来源不可靠，还是等官方公布再准备吧。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 3,
+          "speaker": "agent_3",
+          "receiver": "agent_2",
+          "stance": "uncertain",
+          "confidence": 0.5,
+          "content": "关于开卷考试的消息，我建议我们共同寻找更权威的官方来源确认。",
+          "direction": "received"
+        },
+        {
+          "timestep": 3,
+          "speaker": "agent_4",
+          "receiver": "agent_2",
+          "stance": "reject",
+          "confidence": 0.83,
+          "content": "匿名消息风险太高，开卷考试可能性不大，别信，等官方通知吧。",
+          "direction": "received"
+        },
+        {
+          "timestep": 4,
+          "speaker": "agent_2",
+          "receiver": "agent_1",
+          "stance": "uncertain",
+          "confidence": 0.53,
+          "content": "我明白你倾向相信，但匿名消息不可靠。我们最好一起查一下官方通知，确认后再准备。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 4,
+          "speaker": "agent_3",
+          "receiver": "agent_2",
+          "stance": "uncertain",
+          "confidence": 0.46,
+          "content": "我们最好一起查证官方通知，避免误信匿名消息，你觉得呢？",
+          "direction": "received"
+        }
+      ],
+      "trusted_agents": []
+    },
+    "agent_3": {
+      "name": "组织协调者",
+      "role": "coordinator",
+      "personality": {
+        "activity": 0.75,
+        "trustfulness": 0.52,
+        "verification": 0.75,
+        "risk_sensitivity": 0.68
+      },
+      "opinion": "uncertain",
+      "confidence": 0.46,
+      "memory": [
+        {
+          "timestep": 0,
+          "speaker": "agent_1",
+          "receiver": "agent_3",
+          "stance": "uncertain",
+          "confidence": 0.62,
+          "content": "听说课程考试可能改开卷，但还没正式通知，你觉得呢？",
+          "direction": "received"
+        },
+        {
+          "timestep": 0,
+          "speaker": "agent_3",
+          "receiver": "agent_2",
+          "stance": "uncertain",
+          "confidence": 0.52,
+          "content": "同意等官方消息。我们收集更多信息再决定下一步行动，避免误传。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 0,
+          "speaker": "agent_4",
+          "receiver": "agent_3",
+          "stance": "reject",
+          "confidence": 0.61,
+          "content": "开卷考试消息不可信，风险太大，别传播，等官方确认。",
+          "direction": "received"
+        },
+        {
+          "timestep": 1,
+          "speaker": "agent_3",
+          "receiver": "agent_2",
+          "stance": "uncertain",
+          "confidence": 0.52,
+          "content": "我还是认为需要等待官方确认，但我们可以先准备一份可能的应对方案。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 2,
+          "speaker": "agent_1",
+          "receiver": "agent_3",
+          "stance": "believe",
+          "confidence": 0.78,
+          "content": "这条信息还需要等待正式通知确认。",
+          "direction": "received"
+        },
+        {
+          "timestep": 2,
+          "speaker": "agent_3",
+          "receiver": "agent_4",
+          "stance": "uncertain",
+          "confidence": 0.46,
+          "content": "考试形式调整的消息尚未确认，我建议先等官方通知，但我们可以提前设想两种情况的应对方案。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 3,
+          "speaker": "agent_1",
+          "receiver": "agent_3",
+          "stance": "uncertain",
+          "confidence": 0.5,
+          "content": "听说考试可能改开卷了，虽然还没正式通知，但我觉得挺靠谱，咱们得提前准备起来。",
+          "direction": "received"
+        },
+        {
+          "timestep": 3,
+          "speaker": "agent_3",
+          "receiver": "agent_2",
+          "stance": "uncertain",
+          "confidence": 0.5,
+          "content": "关于开卷考试的消息，我建议我们共同寻找更权威的官方来源确认。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 4,
+          "speaker": "agent_1",
+          "receiver": "agent_3",
+          "stance": "uncertain",
+          "confidence": 0.5,
+          "content": "我听说考试可能变开卷，虽然没正式通知，但我觉得可能性很大，咱们先准备起来更稳妥。",
+          "direction": "received"
+        },
+        {
+          "timestep": 4,
+          "speaker": "agent_3",
+          "receiver": "agent_2",
+          "stance": "uncertain",
+          "confidence": 0.46,
+          "content": "我们最好一起查证官方通知，避免误信匿名消息，你觉得呢？",
+          "direction": "sent"
+        }
+      ],
+      "trusted_agents": [
+        "agent_2"
+      ]
+    },
+    "agent_4": {
+      "name": "风险敏感者",
+      "role": "risk_sensitive",
+      "personality": {
+        "activity": 0.7,
+        "trustfulness": 0.42,
+        "verification": 0.7,
+        "risk_sensitivity": 0.92
+      },
+      "opinion": "reject",
+      "confidence": 0.85,
+      "memory": [
+        {
+          "timestep": 0,
+          "speaker": "agent_4",
+          "receiver": "agent_3",
+          "stance": "reject",
+          "confidence": 0.61,
+          "content": "开卷考试消息不可信，风险太大，别传播，等官方确认。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 1,
+          "speaker": "agent_4",
+          "receiver": "agent_2",
+          "stance": "reject",
+          "confidence": 0.74,
+          "content": "这条信息还需要等待正式通知确认。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 2,
+          "speaker": "agent_3",
+          "receiver": "agent_4",
+          "stance": "uncertain",
+          "confidence": 0.46,
+          "content": "考试形式调整的消息尚未确认，我建议先等官方通知，但我们可以提前设想两种情况的应对方案。",
+          "direction": "received"
+        },
+        {
+          "timestep": 2,
+          "speaker": "agent_4",
+          "receiver": "agent_1",
+          "stance": "reject",
+          "confidence": 0.8,
+          "content": "那则匿名信息风险很高，别轻信，等官方通知再决定复习方向。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 3,
+          "speaker": "agent_4",
+          "receiver": "agent_2",
+          "stance": "reject",
+          "confidence": 0.83,
+          "content": "匿名消息风险太高，开卷考试可能性不大，别信，等官方通知吧。",
+          "direction": "sent"
+        },
+        {
+          "timestep": 4,
+          "speaker": "agent_4",
+          "receiver": "agent_1",
+          "stance": "reject",
+          "confidence": 0.84,
+          "content": "这条信息还需要等待正式通知确认。",
+          "direction": "sent"
+        }
+      ],
+      "trusted_agents": []
+    }
+  },
+  "messages": [
+    {
+      "timestep": 0,
+      "speaker": "agent_1",
+      "receiver": "agent_3",
+      "content": "听说课程考试可能改开卷，但还没正式通知，你觉得呢？",
+      "stance": "uncertain",
+      "confidence": 0.62
+    },
+    {
+      "timestep": 0,
+      "speaker": "agent_2",
+      "receiver": "agent_1",
+      "content": "这个说法还需要官方确认，先别急着传播，我们等正式通知。",
+      "stance": "uncertain",
+      "confidence": 0.56
+    },
+    {
+      "timestep": 0,
+      "speaker": "agent_3",
+      "receiver": "agent_2",
+      "content": "同意等官方消息。我们收集更多信息再决定下一步行动，避免误传。",
+      "stance": "uncertain",
+      "confidence": 0.52
+    },
+    {
+      "timestep": 0,
+      "speaker": "agent_4",
+      "receiver": "agent_3",
+      "content": "开卷考试消息不可信，风险太大，别传播，等官方确认。",
+      "stance": "reject",
+      "confidence": 0.61
+    },
+    {
+      "timestep": 1,
+      "speaker": "agent_1",
+      "receiver": "agent_2",
+      "content": "这条信息还需要等待正式通知确认。",
+      "stance": "believe",
+      "confidence": 0.73
+    },
+    {
+      "timestep": 1,
+      "speaker": "agent_2",
+      "receiver": "agent_1",
+      "content": "虽然你倾向于相信，但我们的验证显示来源不明，建议还是等官方通知再定论。",
+      "stance": "uncertain",
+      "confidence": 0.46
+    },
+    {
+      "timestep": 1,
+      "speaker": "agent_3",
+      "receiver": "agent_2",
+      "content": "我还是认为需要等待官方确认，但我们可以先准备一份可能的应对方案。",
+      "stance": "uncertain",
+      "confidence": 0.52
+    },
+    {
+      "timestep": 1,
+      "speaker": "agent_4",
+      "receiver": "agent_2",
+      "content": "这条信息还需要等待正式通知确认。",
+      "stance": "reject",
+      "confidence": 0.74
+    },
+    {
+      "timestep": 2,
+      "speaker": "agent_1",
+      "receiver": "agent_3",
+      "content": "这条信息还需要等待正式通知确认。",
+      "stance": "believe",
+      "confidence": 0.78
+    },
+    {
+      "timestep": 2,
+      "speaker": "agent_2",
+      "receiver": "agent_1",
+      "content": "我再次核实了来源，匿名消息可信度低，建议等官方通知再决定。",
+      "stance": "uncertain",
+      "confidence": 0.47
+    },
+    {
+      "timestep": 2,
+      "speaker": "agent_3",
+      "receiver": "agent_4",
+      "content": "考试形式调整的消息尚未确认，我建议先等官方通知，但我们可以提前设想两种情况的应对方案。",
+      "stance": "uncertain",
+      "confidence": 0.46
+    },
+    {
+      "timestep": 2,
+      "speaker": "agent_4",
+      "receiver": "agent_1",
+      "content": "那则匿名信息风险很高，别轻信，等官方通知再决定复习方向。",
+      "stance": "reject",
+      "confidence": 0.8
+    },
+    {
+      "timestep": 3,
+      "speaker": "agent_1",
+      "receiver": "agent_3",
+      "content": "听说考试可能改开卷了，虽然还没正式通知，但我觉得挺靠谱，咱们得提前准备起来。",
+      "stance": "uncertain",
+      "confidence": 0.5
+    },
+    {
+      "timestep": 3,
+      "speaker": "agent_2",
+      "receiver": "agent_1",
+      "content": "我理解你的想法，但匿名消息来源不可靠，还是等官方公布再准备吧。",
+      "stance": "uncertain",
+      "confidence": 0.46
+    },
+    {
+      "timestep": 3,
+      "speaker": "agent_3",
+      "receiver": "agent_2",
+      "content": "关于开卷考试的消息，我建议我们共同寻找更权威的官方来源确认。",
+      "stance": "uncertain",
+      "confidence": 0.5
+    },
+    {
+      "timestep": 3,
+      "speaker": "agent_4",
+      "receiver": "agent_2",
+      "content": "匿名消息风险太高，开卷考试可能性不大，别信，等官方通知吧。",
+      "stance": "reject",
+      "confidence": 0.83
+    },
+    {
+      "timestep": 4,
+      "speaker": "agent_1",
+      "receiver": "agent_3",
+      "content": "我听说考试可能变开卷，虽然没正式通知，但我觉得可能性很大，咱们先准备起来更稳妥。",
+      "stance": "uncertain",
+      "confidence": 0.5
+    },
+    {
+      "timestep": 4,
+      "speaker": "agent_2",
+      "receiver": "agent_1",
+      "content": "我明白你倾向相信，但匿名消息不可靠。我们最好一起查一下官方通知，确认后再准备。",
+      "stance": "uncertain",
+      "confidence": 0.53
+    },
+    {
+      "timestep": 4,
+      "speaker": "agent_3",
+      "receiver": "agent_2",
+      "content": "我们最好一起查证官方通知，避免误信匿名消息，你觉得呢？",
+      "stance": "uncertain",
+      "confidence": 0.46
+    },
+    {
+      "timestep": 4,
+      "speaker": "agent_4",
+      "receiver": "agent_1",
+      "content": "这条信息还需要等待正式通知确认。",
+      "stance": "reject",
+      "confidence": 0.84
+    }
+  ],
+  "relationships": {
+    "agent_1": {
+      "agent_2": {
+        "trust": 0.59,
+        "interaction_count": 6
+      },
+      "agent_3": {
+        "trust": 0.54,
+        "interaction_count": 4
+      },
+      "agent_4": {
+        "trust": 0.54,
+        "interaction_count": 2
+      }
+    },
+    "agent_2": {
+      "agent_1": {
+        "trust": 0.57,
+        "interaction_count": 6
+      },
+      "agent_3": {
+        "trust": 0.66,
+        "interaction_count": 4
+      },
+      "agent_4": {
+        "trust": 0.54,
+        "interaction_count": 2
+      }
+    },
+    "agent_3": {
+      "agent_1": {
+        "trust": 0.56,
+        "interaction_count": 4
+      },
+      "agent_2": {
+        "trust": 0.76,
+        "interaction_count": 4
+      },
+      "agent_4": {
+        "trust": 0.57,
+        "interaction_count": 2
+      }
+    },
+    "agent_4": {
+      "agent_1": {
+        "trust": 0.54,
+        "interaction_count": 2
+      },
+      "agent_2": {
+        "trust": 0.57,
+        "interaction_count": 2
+      },
+      "agent_3": {
+        "trust": 0.57,
+        "interaction_count": 2
+      }
+    }
+  },
+  "debate": {
+    "triggered": true,
+    "round": 1,
+    "claims": [
+      {
+        "timestep": 4,
+        "agent_id": "agent_1",
+        "agent_name": "信息传播者",
+        "role": "active_spreader",
+        "stance": "believe",
+        "confidence": 0.71,
+        "claim": "信息传播者认为应当 believe：近期收到的信息与自身判断较一致，且角色本身较愿意相信同伴消息；最近参考了 agent_4 对 agent_1 的交流。"
+      },
+      {
+        "timestep": 4,
+        "agent_id": "agent_2",
+        "agent_name": "理性验证者",
+        "role": "rational_verifier",
+        "stance": "uncertain",
+        "confidence": 0.46,
+        "claim": "理性验证者认为应当 uncertain：现有证据不足，暂时保持观望；最近参考了 agent_3 对 agent_2 的交流。"
+      },
+      {
+        "timestep": 4,
+        "agent_id": "agent_3",
+        "agent_name": "组织协调者",
+        "role": "coordinator",
+        "stance": "uncertain",
+        "confidence": 0.46,
+        "claim": "组织协调者认为应当 uncertain：现有证据不足，暂时保持观望，并提醒群体注意不确定风险；最近参考了 agent_3 对 agent_2 的交流。"
+      },
+      {
+        "timestep": 4,
+        "agent_id": "agent_4",
+        "agent_name": "风险敏感者",
+        "role": "risk_sensitive",
+        "stance": "reject",
+        "confidence": 0.85,
+        "claim": "风险敏感者认为应当 reject：目前证据不足或消息来源仍有风险，因此倾向先验证再传播；最近参考了 agent_4 对 agent_1 的交流。"
+      }
+    ],
+    "votes": {
+      "agent_1": {
+        "agent_name": "信息传播者",
+        "vote": "believe",
+        "confidence": 0.893,
+        "continue_spreading": true
+      },
+      "agent_2": {
+        "agent_name": "理性验证者",
+        "vote": "uncertain",
+        "confidence": 0.846,
+        "continue_spreading": false
+      },
+      "agent_3": {
+        "agent_name": "组织协调者",
+        "vote": "uncertain",
+        "confidence": 0.876,
+        "continue_spreading": false
+      },
+      "agent_4": {
+        "agent_name": "风险敏感者",
+        "vote": "reject",
+        "confidence": 1.0,
+        "continue_spreading": false
+      }
+    },
+    "summary": "围绕“某课程考试形式可能从闭卷调整为开卷，具体安排尚未确认。”，本轮辩论收集 4 条立场陈述：信息传播者=believe(0.71)；理性验证者=uncertain(0.46)；组织协调者=uncertain(0.46)；风险敏感者=reject(0.85)。最终投票中，uncertain 获得 2/4 票，群体仍存在明显分歧。建议在没有官方证据前将信息标记为待验证，并降低继续扩散的确定性语气。"
+  },
+  "metrics": {
+    "spread_rate": [
+      {
+        "timestep": 4,
+        "value": 0.25
+      }
+    ],
+    "average_confidence": [
+      {
+        "timestep": 4,
+        "value": 0.62
+      }
+    ],
+    "opinion_count": [
+      {
+        "timestep": 4,
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      }
+    ],
+    "consensus_reached": false
+  },
+  "timeline": [
+    {
+      "timestep": 0,
+      "event_id": "exam_policy_change",
+      "opinion_count": {
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      },
+      "spread_rate": 0.25,
+      "average_confidence": 0.613,
+      "debate_triggered": true,
+      "agent_status": {
+        "agent_1": {
+          "opinion": "believe",
+          "confidence": 0.73,
+          "trusted_agents": []
+        },
+        "agent_2": {
+          "opinion": "uncertain",
+          "confidence": 0.46,
+          "trusted_agents": []
+        },
+        "agent_3": {
+          "opinion": "uncertain",
+          "confidence": 0.52,
+          "trusted_agents": []
+        },
+        "agent_4": {
+          "opinion": "reject",
+          "confidence": 0.74,
+          "trusted_agents": []
+        }
+      },
+      "message_count": 4
+    },
+    {
+      "timestep": 1,
+      "event_id": "exam_policy_change",
+      "opinion_count": {
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      },
+      "spread_rate": 0.25,
+      "average_confidence": 0.628,
+      "debate_triggered": true,
+      "agent_status": {
+        "agent_1": {
+          "opinion": "believe",
+          "confidence": 0.78,
+          "trusted_agents": []
+        },
+        "agent_2": {
+          "opinion": "uncertain",
+          "confidence": 0.47,
+          "trusted_agents": []
+        },
+        "agent_3": {
+          "opinion": "uncertain",
+          "confidence": 0.46,
+          "trusted_agents": [
+            "agent_2"
+          ]
+        },
+        "agent_4": {
+          "opinion": "reject",
+          "confidence": 0.8,
+          "trusted_agents": []
+        }
+      },
+      "message_count": 4
+    },
+    {
+      "timestep": 2,
+      "event_id": "exam_policy_change",
+      "opinion_count": {
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      },
+      "spread_rate": 0.25,
+      "average_confidence": 0.627,
+      "debate_triggered": true,
+      "agent_status": {
+        "agent_1": {
+          "opinion": "believe",
+          "confidence": 0.72,
+          "trusted_agents": []
+        },
+        "agent_2": {
+          "opinion": "uncertain",
+          "confidence": 0.46,
+          "trusted_agents": []
+        },
+        "agent_3": {
+          "opinion": "uncertain",
+          "confidence": 0.5,
+          "trusted_agents": [
+            "agent_2"
+          ]
+        },
+        "agent_4": {
+          "opinion": "reject",
+          "confidence": 0.83,
+          "trusted_agents": []
+        }
+      },
+      "message_count": 4
+    },
+    {
+      "timestep": 3,
+      "event_id": "exam_policy_change",
+      "opinion_count": {
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      },
+      "spread_rate": 0.25,
+      "average_confidence": 0.65,
+      "debate_triggered": true,
+      "agent_status": {
+        "agent_1": {
+          "opinion": "believe",
+          "confidence": 0.77,
+          "trusted_agents": []
+        },
+        "agent_2": {
+          "opinion": "uncertain",
+          "confidence": 0.53,
+          "trusted_agents": []
+        },
+        "agent_3": {
+          "opinion": "uncertain",
+          "confidence": 0.46,
+          "trusted_agents": [
+            "agent_2"
+          ]
+        },
+        "agent_4": {
+          "opinion": "reject",
+          "confidence": 0.84,
+          "trusted_agents": []
+        }
+      },
+      "message_count": 4
+    },
+    {
+      "timestep": 4,
+      "event_id": "exam_policy_change",
+      "opinion_count": {
+        "believe": 1,
+        "reject": 1,
+        "uncertain": 2
+      },
+      "spread_rate": 0.25,
+      "average_confidence": 0.62,
+      "debate_triggered": true,
+      "agent_status": {
+        "agent_1": {
+          "opinion": "believe",
+          "confidence": 0.71,
+          "trusted_agents": []
+        },
+        "agent_2": {
+          "opinion": "uncertain",
+          "confidence": 0.46,
+          "trusted_agents": []
+        },
+        "agent_3": {
+          "opinion": "uncertain",
+          "confidence": 0.46,
+          "trusted_agents": [
+            "agent_2"
+          ]
+        },
+        "agent_4": {
+          "opinion": "reject",
+          "confidence": 0.85,
+          "trusted_agents": []
+        }
+      },
+      "message_count": 4
+    }
+  ]
+}
